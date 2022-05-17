@@ -11,7 +11,7 @@ import Projects from '../../pages/projects/Projects'
 
 export default function RouteComponent() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route exact={true} path='/' element={<About/>}/>
             <Route exact={true} path='/about' element={<About/>}/>
