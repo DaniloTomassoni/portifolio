@@ -17,7 +17,7 @@ import {
   GitHub
 } from '@mui/icons-material'
 
-const texto = 'Me chamo DANILO AUGUSTO TOMASSONI, tenho 25 anos, nascido em Santa Rita do Sapucaí, Minas Gerais, Atualmente estou me graduando em Análises e Desenvolvimento de Sistemas com objetivo de desenvolver tecnicas e me aprofundar mais na area de TI com objetivo de aprender conceitos e ser futuramente um full-stack!'
+const texto = "My name is DANILO AUGUSTO TOMASSONI, I'm 25 years old, born in Santa Rita do Sapucaí, Minas Gerais, I'm currently graduating in Systems Analysis and Development with the objective of developing techniques and delving deeper into the IT area with the objective of learning concepts and being in the future a full-stack!"
 
 export default function About() {
   return (

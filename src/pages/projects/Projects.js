@@ -13,12 +13,16 @@ import {
 
 import Contador from '../../components/contador/Contador'
 import IMC from '../../components/imc/IMC'
+import Calculadora from '../../components/calculadora/Calculadora'
 
 export default function Projects() {
   const [open, setOpen] = useState(false)
   const [mapComponent, setMapComponet] = useState(null)
   const toggleOpen = (linked) =>{
     setOpen(prev => !prev)
+    if(linked === 'calculadora'){
+      setMapComponet(<Calculadora/>)
+    }
     if(linked === 'contador'){
         setMapComponet(<Contador/>)
     }
@@ -39,9 +43,9 @@ export default function Projects() {
           textAlign:'center'
         
         }}>
-          <Box>
+          <Box container sx={{alignItems:"center", justifyContent:"center", textAlgn:"center"}} >
               <IconButton onClick={toggleOpen}>
-                  <Construction sx={{fontSize:50}}/>
+                  <Construction sx={{fontSize:60}}/>
                 </IconButton>
                   {mapComponent}
           </Box>
@@ -49,6 +53,9 @@ export default function Projects() {
               <Drawer open={open}>
                   <Box>
                       <IconButton onClick={toggleOpen} ><ArrowBack/></IconButton>
+                  </Box>
+                  <Box>
+                      <IconButton onClick={() => toggleOpen('calculadora')} >Calculadora</IconButton>
                   </Box>
                   <Box>
                       <IconButton onClick={() => toggleOpen('contador')} >Contador</IconButton>
