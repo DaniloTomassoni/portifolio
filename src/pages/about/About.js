@@ -22,7 +22,7 @@ const texto = "My name is DANILO AUGUSTO TOMASSONI, I'm 25 years old, born in Sa
 
 export default function About() {
   return (
-    <div>
+    <div style={{background:'#242526'}}>
         <NavBar/>
         <Box sx={{
           maxWidth:'100%',
@@ -33,7 +33,7 @@ export default function About() {
           textAlign:'center'
         
         }}>
-          <Stack direction='row' sx={{justifyContent:'center', padding:5}}>
+          <Stack direction='row' sx={{flex:1,justifyContent:"center",justifyItems:"center",padding:5}}>
             <Avatar src={DANILO} sx={{width:250, height:250}}></Avatar>
           </Stack>
           <Container sx={{width:'70%', background:'#242526'}}>
