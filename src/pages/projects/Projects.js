@@ -14,6 +14,7 @@ import {
 import Contador from '../../components/contador/Contador'
 import IMC from '../../components/imc/IMC'
 import Calculadora from '../../components/calculadora/Calculadora'
+import Footer from '../../components/footer/Footer'
 
 export default function Projects() {
   const [open, setOpen] = useState(false)
@@ -65,7 +66,9 @@ export default function Projects() {
                   </Box>
               </Drawer>
           </Box>
+          
         </Box>
+        <Footer/>
     </div>
   )
 }

@@ -16,6 +16,7 @@ import {
   LinkedIn,
   GitHub
 } from '@mui/icons-material'
+import Footer from '../../components/footer/Footer'
 
 const texto = "My name is DANILO AUGUSTO TOMASSONI, I'm 25 years old, born in Santa Rita do Sapucaí, Minas Gerais, I'm currently graduating in Systems Analysis and Development with the objective of developing techniques and delving deeper into the IT area with the objective of learning concepts and being in the future a full-stack!"
 
@@ -23,7 +24,15 @@ export default function About() {
   return (
     <div>
         <NavBar/>
-        <Box >
+        <Box sx={{
+          maxWidth:'100%',
+          maxHeight:'100vh',
+          width:'100%',
+          height:'90vh',
+          backgroundSize:"100%",
+          textAlign:'center'
+        
+        }}>
           <Stack direction='row' sx={{justifyContent:'center', padding:5}}>
             <Avatar src={DANILO} sx={{width:250, height:250}}></Avatar>
           </Stack>
@@ -37,6 +46,7 @@ export default function About() {
             <Link href="https://github.com/DaniloTomassoni" target="_blank" rel="noreferrer"><GitHub sx={{fontSize:60}}/></Link>
           </Stack>
         </Box>
+        <Footer/>
     </div>
   )
 }

@@ -37,11 +37,13 @@ export default function NavBar() {
     const title_list = ['ABOUT ME', 'PROJECTS', 'CONTACT']
     const title_comp = [<Info />, <Construction/>, <Contacts/>]
     const link_listt = ['/about', '/projects', '/contact']
-    //const [darkMode, setDarkMode] = useState('light')
-    //const [mode, setMode] = useState(false)
+    const [bg, setBg] = useState("transparent")
     const [open, setOpen] = useState(false)
     const toggleOpen = () =>{
         setOpen(prev => !prev)
+        if(open){
+            setBg("transparent")
+        }
     }
     const theme = createTheme({
         palette:{
@@ -61,16 +63,16 @@ export default function NavBar() {
                     <Typography fontFamily='monospace'>{name}</Typography>
                 </Toolbar>
             </AppBar>
-            <Drawer variant='temporary' open={open}color="primary" sx={{background:'transparent'}} >
+            <Drawer variant='temporary' open={open}color="primary" sx={{background:bg, opacity:.6}} >
                 <Box sx={{background:'transparent'}}>
                     <Card sx={{padding:2, background:'transparent'}}>
                         <Tooltip title='DANILO A TOMASSONI'>
-                            <Avatar src={DANILO} sx={{textAlign:'center', bgcolor: deepPurple[500] }}></Avatar>
+                            <Avatar src={DANILO} sx={{textAlign:'center' ,fontSize:70, bgcolor: deepPurple[500] }}></Avatar>
                         </Tooltip>
                     </Card>
               {title_list.map((value, index)=>{
                   return(
-                      <Card key={index} sx={{background:'transparent'}}>
+                      <Card key={index}>
                         <IconButton onClick={toggleOpen} sx={{padding:2}}>{title_comp[index]}<Link to={link_listt[index]} style={{textDecoration:'none', color:'#833AB4'}} ><Typography fontFamily='monospace'>{value}</Typography></Link></IconButton>
                     </Card>
                   )
